@@ -104,29 +104,29 @@ export const Education = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -6, scale: 1.02 }}
-                  className="rounded-2xl border border-white/10 bg-slate-900/50 hover:bg-slate-900/80 hover:border-cyan-500/40 backdrop-blur-md p-6 relative overflow-hidden flex flex-col justify-between transition-all duration-300 shadow-lg group"
+                  className="rounded-2xl border border-cyan-500/30 sm:border-white/10 bg-slate-900/80 sm:bg-slate-900/50 sm:hover:bg-slate-900/80 sm:hover:border-cyan-500/40 backdrop-blur-md p-6 relative overflow-hidden flex flex-col justify-between transition-all duration-300 shadow-xl group"
                 >
                   {/* Subtle Accent Glow */}
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 rounded-full blur-xl group-hover:bg-cyan-500/15 transition-all duration-500 pointer-events-none" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/15 sm:bg-cyan-500/5 rounded-full blur-xl sm:group-hover:bg-cyan-500/15 transition-all duration-500 pointer-events-none" />
 
                   <div>
                     {/* Header Row */}
                     <div className="flex items-center justify-between mb-4">
-                      <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-cyan-400 group-hover:border-cyan-500/30 group-hover:scale-110 transition-all duration-300">
+                      <div className="p-2.5 rounded-xl bg-cyan-500/10 sm:bg-white/5 border border-cyan-500/30 sm:border-white/10 text-cyan-300 sm:text-cyan-400 sm:group-hover:border-cyan-500/30 sm:group-hover:scale-110 transition-all duration-300">
                         <CertIcon className="w-5 h-5" />
                       </div>
 
-                      <span className="px-3 py-1 rounded-full bg-slate-800/80 border border-white/10 text-slate-300 text-[10px] font-mono font-bold tracking-wider uppercase group-hover:border-cyan-500/30 group-hover:text-cyan-300 transition-colors">
+                      <span className="px-3 py-1 rounded-full bg-cyan-500/10 sm:bg-slate-800/80 border border-cyan-400/40 sm:border-white/10 text-cyan-300 sm:text-slate-300 text-[10px] font-mono font-bold tracking-wider uppercase sm:group-hover:border-cyan-500/30 sm:group-hover:text-cyan-300 transition-colors">
                         {cert.badge}
                       </span>
                     </div>
 
-                    <h4 className="text-base sm:text-lg font-bold text-white mb-2 leading-snug font-display group-hover:text-cyan-200 transition-colors">
+                    <h4 className="text-base sm:text-lg font-bold text-cyan-100 sm:text-white mb-2 leading-snug font-display sm:group-hover:text-cyan-200 transition-colors">
                       {cert.title}
                     </h4>
                   </div>
 
-                  <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-slate-400">
+                  <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-slate-300 sm:text-slate-400">
                     <span className="truncate pr-2 font-medium">{cert.issuer}</span>
                     <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0" />
                   </div>

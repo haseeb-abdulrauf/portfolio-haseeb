@@ -3,6 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { SectionHeading } from '../components/SectionHeading';
 import { portfolioData } from '../data/data';
 import { Sparkles, Cpu, CheckCircle2, TrendingUp, Target, Search, ShoppingBag, Layers, ShieldCheck, Zap } from 'lucide-react';
+import wordpressImg from '../assets/wordpress.png';
+import canvaImg from '../assets/canva.png';
+import ebayImg from '../assets/ebay.png';
 
 // Official Brand Logomarks for Tools
 const MetaToolLogo = () => (
@@ -48,19 +51,7 @@ const AhrefsToolLogo = () => (
 );
 
 const CanvaToolLogo = () => (
-  <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none">
-    <circle cx="12" cy="12" r="12" fill="url(#canva-tool-grad-v8)" />
-    <path
-      d="M15.2 8.5C14.2 7.6 12.8 7.2 11.2 7.2C7.8 7.2 5.2 9.7 5.2 13.4C5.2 16.7 7.6 19.1 11 19.1C12.6 19.1 13.9 18.6 15 17.8C15.8 18.2 15.8 18.9 15.1 19.4C14.2 20.1 12.7 20.5 10.9 20.5C5.4 20.5 1.5 16.6 1.5 11.4C1.5 6.2 5.8 2.3 11.3 2.3C13.7 2.3 15.6 2.9 16.8 3.9C17.6 4.6 17.6 5.5 16.7 6.1L15.2 8.5Z"
-      fill="#FFFFFF"
-    />
-    <defs>
-      <linearGradient id="canva-tool-grad-v8" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#00C4CC" />
-        <stop offset="1" stopColor="#7D2AE8" />
-      </linearGradient>
-    </defs>
-  </svg>
+  <img src={canvaImg} alt="Canva" className="w-5 h-5 object-contain shrink-0 mix-blend-screen" />
 );
 
 const ShopifyToolLogo = () => (
@@ -73,20 +64,11 @@ const ShopifyToolLogo = () => (
 );
 
 const WordpressToolLogo = () => (
-  <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none">
-    <circle cx="12" cy="12" r="11" fill="#FFFFFF" />
-    <path
-      fill="#21759B"
-      d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-7.697 12c0-1.848.58-3.56 1.57-4.966L10.3 19.349C6.732 18.064 4.303 14.331 4.303 12zm7.697 10.748c-1.378 0-2.678-.344-3.821-.951l3.528-9.673 3.613 9.613a10.67 10.67 0 0 1-3.32.011zm.698-12.825c.677 0 1.29.07 1.29.07a.465.465 0 0 1 .414.512c-.046.368-.465.418-.883.418h-.233l2.88 8.57 1.674-5.116-.186-.543h-.233c-.418 0-.837-.05-.883-.418a.465.465 0 0 1 .414-.512s.614-.07 1.29-.07c.651 0 1.29.07 1.29.07a.465.465 0 0 1 .418.512c-.047.368-.465.418-.883.418h-.233l2.86 8.52 1.489-4.884c.162-.511.233-.953.233-1.325 0-1.023-.744-1.604-1.744-1.604-.14 0-.279.009-.418.028-.21-.466.07-.977.581-1.023.233-.023.465-.047.721-.047.93 0 1.767.349 2.372.93a5.53 5.53 0 0 1 1.256 3.488c0 1.465-.418 2.86-1.186 4.093l-3.232 9.395c-.86.279-1.767.442-2.721.442-1.023 0-2.023-.186-2.953-.512l3.418-9.976z"
-    />
-  </svg>
+  <img src={wordpressImg} alt="WordPress" className="w-5 h-5 object-contain shrink-0 mix-blend-screen" />
 );
 
 const EbayToolLogo = () => (
-  <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none">
-    <rect width="24" height="24" rx="6" fill="#0064D2" />
-    <text x="4" y="16" fill="#FFFFFF" fontSize="10" fontWeight="bold" fontFamily="sans-serif">eBay</text>
-  </svg>
+  <img src={ebayImg} alt="eBay" className="w-5 h-5 object-contain shrink-0 mix-blend-screen" />
 );
 
 const DarazToolLogo = () => (
@@ -124,7 +106,7 @@ const toolLogoMap = {
 export const Skills = () => {
   const { skills, tools } = portfolioData;
   const [activeCategory, setActiveCategory] = useState("All");
-  const [expandedDomain, setExpandedDomain] = useState(0);
+  const [expandedDomain, setExpandedDomain] = useState(-1);
 
   const categories = ["All", "Social & Ads", "SEO & Search", "Design", "E-Commerce"];
 
@@ -365,36 +347,36 @@ export const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="rounded-3xl border border-white/10 bg-slate-950/60 backdrop-blur-xl p-8 sm:p-12 relative overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.5)]"
+          className="rounded-3xl border border-white/10 bg-slate-950/60 backdrop-blur-xl p-4 sm:p-12 relative overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.5)]"
         >
           {/* Subtle Corner Aura */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
 
           {/* Matrix Header & Filter Tabs */}
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-10 pb-8 border-b border-white/10">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 sm:gap-6 mb-6 sm:mb-10 pb-6 sm:pb-8 border-b border-white/10">
             <div>
-              <div className="flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-400">
-                  <Cpu className="w-5 h-5" />
+              <div className="flex items-center gap-2.5 sm:gap-3">
+                <div className="p-1.5 sm:p-2 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-400">
+                  <Cpu className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-white font-display tracking-tight">
+                <h3 className="text-xl sm:text-3xl font-bold text-white font-display tracking-tight">
                   Software Stack & Infrastructure
                 </h3>
               </div>
-              <p className="text-slate-400 text-sm mt-1">
+              <p className="text-slate-400 text-xs sm:text-sm mt-1">
                 Battle-tested tools and software platforms utilized daily across campaign operations.
               </p>
             </div>
 
-            {/* Filter Tabs */}
-            <div className="flex flex-wrap items-center gap-2 bg-slate-900/90 p-1.5 rounded-xl border border-white/10">
+            {/* Filter Tabs - Single Line Horizontal Scroll on Mobile */}
+            <div className="flex items-center gap-1.5 bg-slate-900/90 p-1.5 rounded-xl border border-white/10 overflow-x-auto no-scrollbar max-w-full">
               {categories.map((cat) => {
                 const isActive = activeCategory === cat;
                 return (
                   <button
                     key={cat}
                     onClick={() => setActiveCategory(cat)}
-                    className={`relative px-4 py-2 rounded-lg text-xs font-mono font-bold uppercase transition-all duration-300 ${
+                    className={`relative px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg text-[10px] sm:text-xs font-mono font-bold uppercase transition-all duration-300 whitespace-nowrap shrink-0 ${
                       isActive ? 'text-white' : 'text-slate-400 hover:text-slate-200'
                     }`}
                   >
@@ -412,10 +394,10 @@ export const Skills = () => {
             </div>
           </div>
 
-          {/* Tool Cards Stream Grid */}
+          {/* Tool Cards Stream Grid - 2 Columns on Mobile */}
           <motion.div
             layout
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+            className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-4"
           >
             <AnimatePresence mode="popLayout">
               {filteredTools.map((tool) => (
@@ -427,22 +409,22 @@ export const Skills = () => {
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.3 }}
                   whileHover={{ y: -4, scale: 1.02 }}
-                  className="group relative p-4 rounded-xl border border-white/10 bg-slate-900/40 hover:bg-slate-900/80 hover:border-cyan-500/40 transition-all duration-300 flex items-center gap-3.5 backdrop-blur-md"
+                  className="group relative p-2.5 sm:p-4 rounded-xl border border-white/10 bg-slate-900/40 hover:bg-slate-900/80 hover:border-cyan-500/40 transition-all duration-300 flex items-center gap-2 sm:gap-3.5 backdrop-blur-md overflow-hidden"
                 >
-                  <div className="p-2.5 rounded-lg bg-white/5 border border-white/10 group-hover:border-cyan-500/30 group-hover:scale-110 transition-all duration-300 shrink-0">
-                    {toolLogoMap[tool.name] || <Sparkles className="w-5 h-5 text-cyan-400" />}
+                  <div className="p-1 sm:p-2 rounded-lg bg-transparent group-hover:scale-110 transition-all duration-300 shrink-0">
+                    {toolLogoMap[tool.name] || <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400" />}
                   </div>
 
                   <div className="min-w-0 flex-1">
-                    <h4 className="text-xs sm:text-sm font-bold text-slate-100 group-hover:text-cyan-300 transition-colors font-display leading-snug">
+                    <h4 className="text-[11px] sm:text-sm font-bold text-slate-100 group-hover:text-cyan-300 transition-colors font-display leading-snug whitespace-normal">
                       {tool.name}
                     </h4>
-                    <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block mt-0.5 truncate">
+                    <span className="text-[9px] sm:text-[10px] font-mono text-slate-400 uppercase tracking-wider block mt-0.5 truncate">
                       {tool.category}
                     </span>
                   </div>
 
-                  <div className="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity shadow-[0_0_8px_#06b6d4]" />
+                  <div className="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full bg-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity shadow-[0_0_8px_#06b6d4]" />
                 </motion.div>
               ))}
             </AnimatePresence>

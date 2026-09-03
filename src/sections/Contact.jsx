@@ -131,7 +131,7 @@ export const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="lg:col-span-5 space-y-6"
+            className="lg:col-span-5 order-2 lg:order-1 space-y-6"
           >
             {/* Status Card */}
             <div className="p-6 rounded-2xl border border-white/10 bg-slate-900/60 backdrop-blur-xl relative overflow-hidden">
@@ -202,7 +202,7 @@ export const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="lg:col-span-7"
+            className="lg:col-span-7 order-1 lg:order-2"
           >
             <div className="p-6 sm:p-7 rounded-3xl border border-white/15 bg-gradient-to-b from-slate-900/90 via-slate-950/80 to-slate-950/95 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative overflow-hidden">
               

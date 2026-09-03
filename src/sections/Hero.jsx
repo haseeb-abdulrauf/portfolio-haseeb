@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { ChevronRight, Sparkles, Download } from 'lucide-react';
 import { portfolioData } from '../data/data';
 import profilePic from '../assets/profile.webp';
@@ -35,11 +36,26 @@ export const Hero = () => {
               </p>
             </div>
 
-            {/* 2. Profile Picture Block - MOBILE ONLY (Middle on Mobile) */}
-            <div className="block lg:hidden my-3 flex justify-center">
+            {/* 2. Profile Picture Block - MOBILE ONLY (Continuous Animation) */}
+            <motion.div 
+              animate={{ y: [-6, 6, -6] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              className="block lg:hidden my-3 flex justify-center"
+            >
               <div className="relative group cursor-pointer max-w-full">
-                {/* Outer Ambient Backdrop Glow */}
-                <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-[#105ebd]/40 via-cyan-500/20 to-[#2F80ED]/30 blur-2xl pointer-events-none" />
+                {/* Continuous Pulsing Ambient Aura */}
+                <motion.div
+                  animate={{ scale: [1, 1.2, 1], opacity: [0.35, 0.7, 0.35] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -inset-4 rounded-full bg-gradient-to-tr from-[#105ebd]/50 via-cyan-400/30 to-[#2F80ED]/40 blur-2xl pointer-events-none"
+                />
+
+                {/* Continuous Rotating Laser Ring */}
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+                  className="absolute -inset-1.5 rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-white opacity-80 blur-[2px] pointer-events-none"
+                />
 
                 {/* Circular Glass Outer Ring */}
                 <div className="p-2 sm:p-2.5 rounded-full bg-white/[0.08] backdrop-blur-xl border border-white/20 shadow-[0_15px_40px_rgba(0,0,0,0.6)] relative">
@@ -62,15 +78,15 @@ export const Hero = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            {/* 3. Description & CTAs Block (Bottom on Mobile, below Title on Desktop) */}
+            {/* 3. Description & CTAs Block */}
             <div className="space-y-4 sm:space-y-6 pt-1">
               <p className="text-slate-100 font-sans text-sm sm:text-base leading-relaxed max-w-2xl font-normal">
                 Digital Marketer with 2+ years of hands-on experience across Organic and Paid Digital Marketing — building brand presence through social media strategy, content creation, Meta Advertising, and Local SEO, alongside e-commerce store and catalog management.
               </p>
 
-              {/* CTA Buttons - Parallel Side by Side Layout */}
+              {/* CTA Buttons */}
               <div className="pt-2 grid grid-cols-2 gap-3 sm:flex sm:flex-row sm:items-center">
                 <a
                   href="#services"
@@ -95,11 +111,26 @@ export const Hero = () => {
 
           </div>
 
-          {/* Right Column: Profile Picture Block - DESKTOP ONLY */}
+          {/* Right Column: Profile Picture Block - DESKTOP ONLY (Continuous Animation) */}
           <div className="hidden lg:flex lg:col-span-5 justify-center lg:justify-end">
-            <div className="relative group cursor-pointer">
-              {/* Outer Ambient Backdrop Glow */}
-              <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-[#105ebd]/40 via-cyan-500/20 to-[#2F80ED]/30 blur-2xl group-hover:blur-3xl group-hover:from-blue-500/60 group-hover:to-cyan-400/50 transition-all duration-700 pointer-events-none" />
+            <motion.div 
+              animate={{ y: [-8, 8, -8] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="relative group cursor-pointer"
+            >
+              {/* Continuous Pulsing Ambient Aura */}
+              <motion.div
+                animate={{ scale: [1, 1.25, 1], opacity: [0.4, 0.75, 0.4] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute -inset-5 rounded-full bg-gradient-to-tr from-[#105ebd]/50 via-cyan-400/35 to-[#2F80ED]/45 blur-2xl pointer-events-none"
+              />
+
+              {/* Continuous Rotating Laser Ring */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
+                className="absolute -inset-1.5 rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-white opacity-80 blur-[2px] pointer-events-none"
+              />
 
               {/* Circular Glass Outer Ring */}
               <div className="p-2.5 rounded-full bg-white/[0.08] backdrop-blur-xl border border-white/20 group-hover:border-cyan-400/50 group-hover:scale-105 group-hover:shadow-[0_20px_60px_rgba(6,182,212,0.35)] transition-all duration-500 ease-out shadow-[0_15px_40px_rgba(0,0,0,0.6)] relative">
@@ -113,7 +144,7 @@ export const Hero = () => {
                     className="w-full h-full object-cover object-center group-hover:scale-110 group-hover:rotate-1 transition-transform duration-700 ease-out"
                   />
                   
-                  {/* Glass Light Sheen Sweep Effect on Hover */}
+                  {/* Glass Light Sheen Sweep Effect */}
                   <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />
                 </div>
               </div>
@@ -127,7 +158,7 @@ export const Hero = () => {
                 </div>
               </div>
 
-            </div>
+            </motion.div>
           </div>
 
         </div>
