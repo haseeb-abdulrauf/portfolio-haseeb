@@ -143,15 +143,15 @@ export const Navbar = () => {
         </nav>
       </div>
 
-      {/* Appealing Glassmorphism Mobile Drawer Menu */}
+      {/* Lag-Free GPU-Accelerated Mobile Drawer Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'calc(100vh - 65px)' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="md:hidden fixed inset-x-0 top-[65px] bg-[#020b18]/98 backdrop-blur-3xl z-40 border-b border-white/10 flex flex-col justify-between p-6 overflow-y-auto"
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="md:hidden fixed inset-x-0 top-[65px] h-[calc(100vh-65px)] bg-[#020b18]/98 backdrop-blur-3xl z-40 border-b border-white/10 flex flex-col justify-between p-6 overflow-y-auto transform-gpu"
           >
             {/* Nav Items List */}
             <div className="flex flex-col space-y-3 pt-2">
