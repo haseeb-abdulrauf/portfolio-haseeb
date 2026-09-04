@@ -26,7 +26,7 @@ export const Hero = () => {
               </div>
 
               {/* Main Name Headline */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-display font-black tracking-tight text-white leading-[1.1] break-words">
+              <h1 className="text-[5.8vw] min-[400px]:text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-display font-black tracking-tight text-white leading-tight sm:leading-[1.1] whitespace-nowrap">
                 {personal.name}
               </h1>
 
