@@ -36,12 +36,8 @@ export const Hero = () => {
               </p>
             </div>
 
-            {/* 2. Profile Picture Block - MOBILE ONLY (Continuous Animation) */}
-            <motion.div 
-              animate={{ y: [-6, 6, -6] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-              className="block lg:hidden my-3 flex justify-center"
-            >
+            {/* 2. Profile Picture Block - MOBILE ONLY */}
+            <div className="block lg:hidden my-3 flex justify-center">
               <div className="relative group cursor-pointer max-w-full">
                 {/* Continuous Pulsing Ambient Aura */}
                 <motion.div
@@ -74,11 +70,11 @@ export const Hero = () => {
                   <Sparkles className="w-4 h-4 text-cyan-300 shrink-0 animate-pulse" />
                   <div>
                     <p className="font-bold text-white text-xs">2+ Years Exp.</p>
-                    <p className="text-[10px] text-white/90 font-sans">Scaling Brands & Performance</p>
+                    <p className="text-[10px] text-white/90 font-sans">Making Brands Grow & Driving Results</p>
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* 3. Description & CTAs Block */}
             <div className="space-y-4 sm:space-y-6 pt-1">
@@ -111,13 +107,9 @@ export const Hero = () => {
 
           </div>
 
-          {/* Right Column: Profile Picture Block - DESKTOP ONLY (Continuous Animation) */}
+          {/* Right Column: Profile Picture Block - DESKTOP ONLY */}
           <div className="hidden lg:flex lg:col-span-5 justify-center lg:justify-end">
-            <motion.div 
-              animate={{ y: [-8, 8, -8] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="relative group cursor-pointer"
-            >
+            <div className="relative group cursor-pointer">
               {/* Continuous Pulsing Ambient Aura */}
               <motion.div
                 animate={{ scale: [1, 1.25, 1], opacity: [0.4, 0.75, 0.4] }}
@@ -154,11 +146,11 @@ export const Hero = () => {
                 <Sparkles className="w-4 h-4 text-cyan-300 shrink-0 animate-pulse" />
                 <div>
                   <p className="font-bold text-white text-xs">2+ Years Exp.</p>
-                  <p className="text-[10px] text-white/90 font-sans">Scaling Brands & Performance</p>
+                  <p className="text-[10px] text-white/90 font-sans">Making Brands Grow & Driving Results</p>
                 </div>
               </div>
 
-            </motion.div>
+            </div>
           </div>
 
         </div>

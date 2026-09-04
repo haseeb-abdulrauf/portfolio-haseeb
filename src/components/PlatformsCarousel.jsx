@@ -1,4 +1,5 @@
 import React from 'react';
+import canvaImg from '../assets/canva.png';
 
 // 100% Official & Precise Brand SVG Vectors
 const MetaLogo = () => (
@@ -45,19 +46,7 @@ const SemrushLogo = () => (
 );
 
 const CanvaLogo = () => (
-  <svg className="w-7 h-7 shrink-0" viewBox="0 0 24 24" fill="none">
-    <circle cx="12" cy="12" r="12" fill="url(#canva-official-grad-v2)" />
-    <path
-      d="M15.2 8.5C14.2 7.6 12.8 7.2 11.2 7.2C7.8 7.2 5.2 9.7 5.2 13.4C5.2 16.7 7.6 19.1 11 19.1C12.6 19.1 13.9 18.6 15 17.8C15.8 18.2 15.8 18.9 15.1 19.4C14.2 20.1 12.7 20.5 10.9 20.5C5.4 20.5 1.5 16.6 1.5 11.4C1.5 6.2 5.8 2.3 11.3 2.3C13.7 2.3 15.6 2.9 16.8 3.9C17.6 4.6 17.6 5.5 16.7 6.1L15.2 8.5Z"
-      fill="#FFFFFF"
-    />
-    <defs>
-      <linearGradient id="canva-official-grad-v2" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#00C4CC" />
-        <stop offset="1" stopColor="#7D2AE8" />
-      </linearGradient>
-    </defs>
-  </svg>
+  <img src={canvaImg} alt="Canva" className="w-7 h-7 object-contain shrink-0 mix-blend-screen" />
 );
 
 const DarazLogo = () => (
