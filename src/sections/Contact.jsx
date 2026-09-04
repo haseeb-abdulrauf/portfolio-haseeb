@@ -19,6 +19,22 @@ export const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
 
+  const openComposer = (to, subject, body) => {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      typeof navigator !== 'undefined' ? navigator.userAgent : ''
+    ) || (typeof window !== 'undefined' && window.innerWidth < 768);
+
+    if (isMobile) {
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    } else {
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}&su=${subject}&body=${body}`;
+      const newWin = window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+      if (!newWin || newWin.closed || typeof newWin.closed === 'undefined') {
+        window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+      }
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -34,8 +50,7 @@ export const Contact = () => {
         setSubmitted(true);
         const subject = encodeURIComponent(`Portfolio Inquiry: ${formData.service} from ${formData.name}`);
         const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nService: ${formData.service}\n\nMessage:\n${formData.message}`);
-        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(personal.email)}&su=${subject}&body=${body}`;
-        window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+        openComposer(personal.email, subject, body);
       }, 800);
       return;
     }
@@ -72,8 +87,7 @@ export const Contact = () => {
           setErrorMsg('Form service offline. Opening direct email composer...');
           const subject = encodeURIComponent(`Portfolio Inquiry: ${formData.service} from ${formData.name}`);
           const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nService: ${formData.service}\n\nMessage:\n${formData.message}`);
-          const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(personal.email)}&su=${subject}&body=${body}`;
-          window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+          openComposer(personal.email, subject, body);
         }
       }
     } catch (error) {
@@ -81,8 +95,7 @@ export const Contact = () => {
       // Fallback to direct Gmail compose on network error
       const subject = encodeURIComponent(`Portfolio Inquiry: ${formData.service} from ${formData.name}`);
       const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nService: ${formData.service}\n\nMessage:\n${formData.message}`);
-      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(personal.email)}&su=${subject}&body=${body}`;
-      window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+      openComposer(personal.email, subject, body);
       setSubmitted(true);
     } finally {
       setIsSubmitting(false);

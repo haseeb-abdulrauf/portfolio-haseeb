@@ -27,17 +27,26 @@ export const ToastProvider = ({ children }) => {
       navigator.clipboard.writeText(email).catch(() => {});
     }
 
-    // 2. Open Gmail compose window directly
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
-    const newWindow = window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+    // Detect mobile device or small screen
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      typeof navigator !== 'undefined' ? navigator.userAgent : ''
+    ) || (typeof window !== 'undefined' && window.innerWidth < 768);
 
-    // 3. Fallback to mailto protocol if popups blocked or native app available
-    if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+    if (isMobile) {
+      // Directly trigger mailto protocol on mobile to open default Mail app with recipient pre-filled
       window.location.href = `mailto:${email}`;
-    }
+      showToast(email, 'Opening Mail App');
+    } else {
+      // Desktop: Open Gmail compose window in new tab, fallback to mailto protocol
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
+      const newWindow = window.open(gmailUrl, '_blank', 'noopener,noreferrer');
 
-    // 4. Trigger Toast Notification
-    showToast(email, 'Email Copied & Opening Compose');
+      if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+        window.location.href = `mailto:${email}`;
+      }
+
+      showToast(email, 'Email Copied & Opening Compose');
+    }
   };
 
   return (
