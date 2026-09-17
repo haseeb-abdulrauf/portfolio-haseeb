@@ -68,7 +68,7 @@ export const Services = () => {
         <SectionHeading
           badge="Services"
           title="WHAT I DO FOR YOU"
-          subtitle="Tailored digital marketing solutions designed to drive audience engagement, paid performance, and online revenue."
+          subtitle="Practical digital marketing solutions built around your business — helping you build a stronger presence, reach the right audience, and grow online."
           centered
         />
 

@@ -70,7 +70,7 @@ export const Hero = () => {
                   <Sparkles className="w-4 h-4 text-cyan-300 shrink-0 animate-pulse" />
                   <div>
                     <p className="font-bold text-white text-xs">2+ Years Exp.</p>
-                    <p className="text-[10px] text-white/90 font-sans">Making Brands Grow & Driving Results</p>
+                    <p className="text-[10px] text-white/90 font-sans">Building Brand Presence & Supporting Growth</p>
                   </div>
                 </div>
               </div>
@@ -79,7 +79,7 @@ export const Hero = () => {
             {/* 3. Description & CTAs Block */}
             <div className="space-y-4 sm:space-y-6 pt-1">
               <p className="text-slate-100 font-sans text-sm sm:text-base leading-relaxed max-w-2xl font-normal">
-                Digital Marketer with 2+ years of hands-on experience across Organic and Paid Digital Marketing — building brand presence through social media strategy, content creation, Meta Advertising, and Local SEO, alongside e-commerce store and catalog management.
+                Digital Marketer with 2+ years of hands-on experience across organic and paid marketing — helping businesses build a stronger digital presence through social media, content strategy, Meta advertising, local search, and e-commerce operations.
               </p>
 
               {/* CTA Buttons */}
@@ -146,7 +146,7 @@ export const Hero = () => {
                 <Sparkles className="w-4 h-4 text-cyan-300 shrink-0 animate-pulse" />
                 <div>
                   <p className="font-bold text-white text-xs">2+ Years Exp.</p>
-                  <p className="text-[10px] text-white/90 font-sans">Making Brands Grow & Driving Results</p>
+                  <p className="text-[10px] text-white/90 font-sans">Building Brand Presence & Supporting Growth</p>
                 </div>
               </div>
 

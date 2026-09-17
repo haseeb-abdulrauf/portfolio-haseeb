@@ -168,14 +168,14 @@ export const Contact = () => {
               {/* Email Card */}
               <button
                 onClick={(e) => triggerEmailAction(e, personal.email)}
-                className="group p-5 rounded-2xl border border-white/10 bg-slate-950/40 hover:bg-slate-900/80 hover:border-cyan-500/40 backdrop-blur-md transition-all duration-300 flex items-center gap-4 w-full text-left cursor-pointer"
+                className="group p-4 sm:p-5 rounded-2xl border border-white/10 bg-slate-950/40 hover:bg-slate-900/80 hover:border-cyan-500/40 backdrop-blur-md transition-all duration-300 flex items-center gap-3.5 sm:gap-4 w-full text-left cursor-pointer overflow-hidden"
               >
-                <div className="p-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 group-hover:scale-110 transition-transform">
+                <div className="p-2.5 sm:p-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 group-hover:scale-110 transition-transform shrink-0">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div className="min-w-0 flex-1">
                   <span className="text-[10px] font-mono uppercase text-slate-400 block font-semibold">Email Directly</span>
-                  <span className="text-sm font-semibold text-white group-hover:text-cyan-300 transition-colors truncate block">
+                  <span className="text-xs min-[380px]:text-[13px] sm:text-sm font-semibold text-white group-hover:text-cyan-300 transition-colors break-all leading-snug block">
                     {personal.email}
                   </span>
                 </div>

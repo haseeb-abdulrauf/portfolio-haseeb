@@ -8,24 +8,27 @@
   - `location`: Lahore, Pakistan
   - `period`: March 2026 – Present
   - `type`: Current Role
-  - `bullets`: Social campaign management, healthcare brand authority, organic engagement growth, digital ad strategy.
-  - `tags`: Healthcare Marketing, Social Media, Content Strategy, Brand Growth
+  - `description`: Building a more consistent and patient-focused digital presence through organic social media, content, and local search.
+  - `bullets`: Plan content around healthcare awareness, services, and trust; Develop patient-friendly social creatives and marketing copy; Manage content calendars, publishing, and page operations; Optimize Google Business Profile and support local search strategy; Monitor insights to guide content and engagement decisions.
+  - `tags`: HealthcareMarketing, SocialMedia, LocalSEO, ContentStrategy, GBPOptimization
 
   - `role`: Social Media Marketer
   - `company`: Nadeem Physio Store
   - `location`: Lahore, Pakistan
   - `period`: April 2024 – February 2026
-  - `type`: Full-Time
-  - `bullets`: Performance ad campaigns, local SEO, lead generation, e-commerce sales conversion.
-  - `tags`: Meta Ads, Local SEO, E-Commerce, Copywriting
+  - `type`: Part-Time
+  - `description`: Worked across social media, Meta advertising, e-commerce, and local digital presence for a healthcare and fitness-focused business.
+  - `bullets`: Planned and executed Meta campaigns around business objectives; Targeted audiences and monitored campaign performance; Supported Shopify storefront design and Daraz operations; Created product creatives and promotional content; Supported Google Business Profile and local visibility.
+  - `tags`: MetaAds, Shopify, CanvaCreatives, Daraz, MetaEventsManager, LocalSEO
 
   - `role`: E-Commerce Executive
   - `company`: Kodimy
   - `location`: Lahore, Pakistan
   - `period`: June 2025 – January 2026
-  - `type`: Full-Time
-  - `bullets`: Multi-channel e-commerce management (Shopify, Daraz, eBay), listing optimization, order fulfillment.
-  - `tags`: Shopify, Daraz, eBay, Inventory Management, Store Ops
+  - `type`: Part-Time
+  - `description`: Supported multi-platform e-commerce operations across Shopify, WordPress, eBay, and Daraz.
+  - `bullets`: Maintained product listings and storefront updates; Improved product titles, descriptions, and categorization; Created product listing graphics and promotional assets; Supported catalog and inventory updates across platforms.
+  - `tags`: Shopify, WordPress, eBay, Daraz, ListingOptimization, Canva
 
 ## 2. Banned Paradigms Ledger
 - 🚫 `static-stacked-card-list` -> BANNED

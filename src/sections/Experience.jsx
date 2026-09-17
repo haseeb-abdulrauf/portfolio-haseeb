@@ -42,8 +42,8 @@ export const Experience = () => {
         {/* Section Heading */}
         <SectionHeading
           badge="Career Journey"
-          title="Career Experience & Progression"
-          subtitle="A continuous trajectory of execution across healthcare marketing, performance ad scaling, and e-commerce operations."
+          title="CAREER EXPERIENCE & PROGRESSION"
+          subtitle="Hands-on marketing experience across social media, paid advertising, local search, and e-commerce — combining strategy with practical execution."
           centered
         />
 
@@ -121,6 +121,13 @@ export const Experience = () => {
                         <span>{exp.location}</span>
                       </div>
                     </div>
+
+                    {/* Role Description Summary */}
+                    {exp.description && (
+                      <p className="text-slate-300 text-xs font-sans leading-relaxed mb-3">
+                        {exp.description}
+                      </p>
+                    )}
 
                     {/* Achievement Bullet Stream */}
                     <ul className="space-y-1.5 mb-3 text-left">
@@ -251,6 +258,13 @@ export const Experience = () => {
                           <span>{exp.location}</span>
                         </div>
                       </div>
+
+                      {/* Role Description Summary */}
+                      {exp.description && (
+                        <p className={`text-slate-300 text-sm font-sans leading-relaxed mb-4 ${isEven ? 'text-right' : 'text-left'}`}>
+                          {exp.description}
+                        </p>
+                      )}
 
                       {/* Achievement Bullet Stream */}
                       <ul className="space-y-3 mb-6 text-left">

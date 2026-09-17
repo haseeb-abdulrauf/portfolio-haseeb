@@ -22,7 +22,11 @@ export const portfolioData = {
   hero: {
     badge: "Digital Marketing & Social Media Strategist",
     headline: "Building Brand Authority Through Strategic Social Media & Paid Growth",
-    description: "Digital Marketer with 2+ years of hands-on experience driving organic engagement, Meta Advertising campaigns, Local SEO, and multi-channel operations across healthcare, retail, and digital brands.",
+    description: "Digital Marketer with 2+ years of hands-on experience across organic and paid marketing — helping businesses build a stronger digital presence through social media, content strategy, Meta advertising, local search, and e-commerce operations.",
+    statBadge: {
+      experience: "2+ Years Exp.",
+      tagline: "Building Brand Presence & Supporting Growth"
+    },
     primaryCta: "Explore Services",
     secondaryCta: "Get In Touch",
   },
@@ -57,41 +61,66 @@ export const portfolioData = {
       id: "01",
       title: "Social Media Management",
       category: "Organic Growth",
-      description: "Comprehensive day-to-day social media operations including content planning, calendar scheduling, audience engagement, and platform management.",
-      features: ["Content Calendar & Planning", "Audience Engagement Strategy", "Platform Operations", "Community Moderation"],
+      description: "Build a consistent social presence that keeps your brand visible, relevant, and connected with the right audience.",
+      features: [
+        "Build Stronger Brand Presence",
+        "Create Purposeful Content",
+        "Increase Audience Engagement",
+        "Maintain Consistent Presence"
+      ],
       icon: "Share2"
     },
     {
       id: "02",
       title: "Meta Advertising & Paid Ads",
       category: "Performance Marketing",
-      description: "Data-backed Facebook & Instagram ad campaigns executed via Meta Ads Manager. Precise audience targeting, budget optimization, and pixel/event monitoring.",
-      features: ["Meta Ads Manager Campaign Setup", "Audience Targeting & Retargeting", "Meta Events Manager Tracking", "Cost Per Result Optimization"],
+      description: "I build Meta campaigns around your business objectives — from awareness and engagement to follower growth, lead generation, and sales.",
+      features: [
+        "Funnel-Based Campaign Strategy",
+        "Awareness, Engagement & Follower Growth",
+        "Lead Generation & Sales Campaigns",
+        "Campaign Optimization & Scaling"
+      ],
       icon: "Target"
     },
     {
       id: "03",
       title: "Content Strategy & Creatives",
       category: "Creative Direction",
-      description: "Developing audience-focused content strategies and designing high-converting visual creatives using Canva for healthcare and retail campaigns.",
-      features: ["Healthcare & Product Creatives", "Copywriting & Ad Copy", "Canva Graphic Design", "Content & Profile Audits"],
+      description: "I turn your business goals into relevant content and creative ideas that communicate your message clearly and connect with your audience.",
+      features: [
+        "Build Clear Content Direction",
+        "Create Audience-Focused Content",
+        "Develop Campaign Creatives",
+        "Optimized Ad Copies"
+      ],
       icon: "PenTool"
     },
     {
       id: "04",
-      title: "Local SEO & Business Profiles",
-      category: "Search Discovery",
-      description: "Optimizing Google Business Profiles and conducting hyper-local keyword research to dramatically increase local search discoverability.",
-      features: ["Google Business Profile Optimization", "Local Search Keyword Research", "Local Listing Audit", "Maps Visibility Enhancement"],
-      icon: "MapPin"
+      title: "E-Commerce Operations",
+      category: "Store Management",
+      description: "I help keep your online store and product presence organized and discoverable across multiple e-commerce platforms.",
+      features: [
+        "Improve Product Discoverability",
+        "Organize Product Catalogs",
+        "Maintain Storefronts & Listings",
+        "Support Multi-Platform Operations"
+      ],
+      icon: "ShoppingBag"
     },
     {
       id: "05",
-      title: "E-Commerce Operations",
-      category: "Store Management",
-      description: "Designing Shopify storefronts and maintaining multi-channel product catalogs across Shopify, Daraz, WordPress, and eBay.",
-      features: ["Shopify Storefront Design", "Multi-Channel Listing & SEO", "Catalog & Inventory Updates", "Daraz & eBay Operations"],
-      icon: "ShoppingBag"
+      title: "Local SEO & Business Profiles",
+      category: "Search Discovery",
+      description: "I help local businesses become easier to find when customers search online through Google Business Profile optimization and local search research.",
+      features: [
+        "Improve Local Visibility",
+        "Strengthen Google Presence",
+        "Target Local Search Opportunities",
+        "Improve Maps Discoverability"
+      ],
+      icon: "MapPin"
     }
   ],
 
@@ -102,41 +131,46 @@ export const portfolioData = {
       location: "Lahore, Pakistan",
       period: "March 2026 – Present",
       type: "Current Role",
+      description: "Building a more consistent and patient-focused digital presence through organic social media, content, and local search.",
       bullets: [
-        "Manage end-to-end organic social media operations, content planning, and calendar publishing.",
-        "Develop healthcare-focused graphic creatives & copies to build patient trust and brand authority.",
-        "Optimize Google Business Profile and execute local SEO keyword strategy for clinic discoverability.",
-        "Track platform insights & analytics to continuously improve organic post engagement."
+        "Plan content around healthcare awareness, services, and trust.",
+        "Develop patient-friendly social creatives and marketing copy.",
+        "Manage content calendars, publishing, and page operations.",
+        "Optimize Google Business Profile and support local search strategy.",
+        "Monitor insights to guide content and engagement decisions."
       ],
-      tags: ["Healthcare Marketing", "Social Media", "Local SEO", "Content Planning", "GBP Optimization"]
+      tags: ["HealthcareMarketing", "SocialMedia", "LocalSEO", "ContentStrategy", "GBPOptimization"]
     },
     {
       role: "Social Media Marketer",
       company: "Nadeem Physio Store",
       location: "Lahore, Pakistan",
       period: "April 2024 – February 2026",
-      type: "Full-Time",
+      type: "Part-Time",
+      description: "Worked across social media, Meta advertising, e-commerce, and local digital presence for a healthcare and fitness-focused business.",
       bullets: [
-        "Executed Meta Ads Manager campaigns, targeting custom audiences and optimizing cost per result.",
-        "Configured Meta Events Manager tracking & pixel analytics for performance campaign optimization.",
-        "Designed custom Shopify storefront & operated multi-channel store presence on Daraz.",
-        "Managed product creatives in Canva, promotional campaigns, and Google Business Profile local SEO."
+        "Planned and executed Meta campaigns around business objectives.",
+        "Targeted audiences and monitored campaign performance.",
+        "Supported Shopify storefront design and Daraz operations.",
+        "Created product creatives and promotional content.",
+        "Supported Google Business Profile and local visibility."
       ],
-      tags: ["Meta Ads", "Shopify Design", "Canva Creatives", "Daraz Store", "Meta Events Manager", "Local SEO"]
+      tags: ["MetaAds", "Shopify", "CanvaCreatives", "Daraz", "MetaEventsManager", "LocalSEO"]
     },
     {
       role: "E-Commerce Executive",
       company: "Kodimy",
       location: "Lahore, Pakistan",
       period: "June 2025 – January 2026",
-      type: "Full-Time",
+      type: "Part-Time",
+      description: "Supported multi-platform e-commerce operations across Shopify, WordPress, eBay, and Daraz.",
       bullets: [
-        "Managed multi-platform e-commerce store operations across Shopify, WordPress, eBay, and Daraz.",
-        "Optimized product titles, SEO descriptions, and category metadata for maximum product discoverability.",
-        "Designed high-converting product listing graphic assets in Canva for promotional campaigns.",
-        "Maintained inventory catalog sync and catalog updates across all digital storefronts."
+        "Maintained product listings and storefront updates.",
+        "Improved product titles, descriptions, and categorization.",
+        "Created product listing graphics and promotional assets.",
+        "Supported catalog and inventory updates across platforms."
       ],
-      tags: ["Shopify", "WordPress", "eBay", "Daraz", "Listing Optimization", "Canva"]
+      tags: ["Shopify", "WordPress", "eBay", "Daraz", "ListingOptimization", "Canva"]
     }
   ],
 

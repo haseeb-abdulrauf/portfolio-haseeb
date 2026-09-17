@@ -77,7 +77,7 @@ export const ToastProvider = ({ children }) => {
                   </span>
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
                 </div>
-                <p className="text-xs font-semibold text-slate-100 mt-0.5 truncate">
+                <p className="text-xs font-semibold text-slate-100 mt-0.5 break-all">
                   {toast.message}
                 </p>
                 <p className="text-[11px] text-slate-400 mt-1 flex items-center gap-1.5 font-mono">
